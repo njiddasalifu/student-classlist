@@ -6,7 +6,6 @@ using namespace std;
 
 
 
-
 // student class
 class Student {
 public:
@@ -23,7 +22,7 @@ class classe {
         void addstudent(Student students[], int& num_stud) {
             cout << "Add a new student!!" <<endl;
             if(num_stud >= 100){
-                cout << "The maximum amount of students was reached" <<endl;
+                cout << "Class full already, try another class." <<endl;
                 return;
             }
 
@@ -75,7 +74,7 @@ class classe {
                 }
             }
             if(!found) {
-                cout << "Student not found.Check your spelling and try again." << endl;
+                cout << "Student not found. Check your spelling and try again." << endl;
             }
         }
 
@@ -136,7 +135,7 @@ int main() {
     classe methods;
     int choice;
     int num_stud = 0;
-    cout << "Welcome to ClassManagement\n";
+    cout << "Welcome to Class Management\n";
     cout << "=============================" <<endl;
     printf("1.Add student\n\n2.Print Class List\n\n3.Search By ID\n\n4.Search By First Name\n\n5.Search By Last Name\n\n");
     options:
@@ -157,6 +156,9 @@ int main() {
         break;
     case 5:
         methods.searchByStudentLast_name(students, num_stud, Last_name);
+        break;
+    case 6: 
+        exit();
         break;
 
     default: cout << "Wrong option choose again" <<endl;

@@ -127,7 +127,7 @@ class classe {
 
 };
 
-
+// main program
 int main() {
     Student students[100];
     char stud_id[9];
